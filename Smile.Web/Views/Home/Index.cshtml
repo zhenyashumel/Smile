@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Smile.Entities.Order>
+@{
+    ViewBag.Title = "Главная";
+}
+
+
+@foreach (var el in Model)
+{
+    <div>
+        <p>Date: @el.Date.ToString("dd MMMMMMMMMM yyyy")</p>
+        <p>Raiting: @el.Raiting</p>
+        <span>
+            Employees:
+            @foreach (var e in el.Employees)
+            {
+                @(e.Name + " ")
+            }
+        </span>
+    </div>
+}
+
+   
+
+
