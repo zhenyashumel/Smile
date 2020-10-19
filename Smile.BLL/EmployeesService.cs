@@ -28,6 +28,11 @@ namespace Smile.BLL
                 return db.Employees.Find(e => e.Orders.Count == count);
             }
         }
+
+        public static void SendOrder(int id)
+        {
+
+        }
         
     }
 }
