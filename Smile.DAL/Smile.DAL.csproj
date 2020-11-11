@@ -52,13 +52,17 @@
   <ItemGroup>
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Migrations\202010101349055_InitialCreate.cs" />
-    <Compile Include="Migrations\202010101349055_InitialCreate.designer.cs">
-      <DependentUpon>202010101349055_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202011102012512_NewMigration.cs" />
+    <Compile Include="Migrations\202011102012512_NewMigration.designer.cs">
+      <DependentUpon>202011102012512_NewMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010120714030_AddOrdersMigration.cs" />
-    <Compile Include="Migrations\202010120714030_AddOrdersMigration.designer.cs">
-      <DependentUpon>202010120714030_AddOrdersMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202011102024343_Time.cs" />
+    <Compile Include="Migrations\202011102024343_Time.designer.cs">
+      <DependentUpon>202011102024343_Time.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011102118289_AddLang.cs" />
+    <Compile Include="Migrations\202011102118289_AddLang.designer.cs">
+      <DependentUpon>202011102118289_AddLang.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\CharacterRepository.cs" />
@@ -81,11 +85,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010101349055_InitialCreate.resx">
-      <DependentUpon>202010101349055_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011102012512_NewMigration.resx">
+      <DependentUpon>202011102012512_NewMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010120714030_AddOrdersMigration.resx">
-      <DependentUpon>202010120714030_AddOrdersMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011102024343_Time.resx">
+      <DependentUpon>202011102024343_Time.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011102118289_AddLang.resx">
+      <DependentUpon>202011102118289_AddLang.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

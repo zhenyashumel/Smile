@@ -19,12 +19,12 @@ namespace Smile.DAL.Repositories
         }
         public IEnumerable<Order> GetAll()
         {
-            return db.Orders.Include(s => s.Employees).ToList();
+            return db.Orders.Include(s=>s.Character).Include(s => s.Employees).Include(s=>s.Language).ToList();
         }
 
         public Order Get(int id)
         {
-            return db.Orders.FirstOrDefault(e => e.Id == id);
+            return db.Orders.Include(s => s.Character).Include(s => s.Employees).Include(s => s.Language).FirstOrDefault(e => e.Id == id);
         }
 
         public void Create(Order item)
@@ -52,7 +52,7 @@ namespace Smile.DAL.Repositories
 
         public IEnumerable<Order> Find(Func<Order, bool> predicate)
         {
-            return db.Orders.Include(s => s.Employees).Where(predicate).ToList();
+            return db.Orders.Include(s=>s.Language).Include(s=>s.Character).Include(s => s.Employees).Where(predicate).ToList();
         }
     }
 }

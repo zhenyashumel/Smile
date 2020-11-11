@@ -21,12 +21,11 @@ namespace Smile.BLL
 
             if(employees.Count() == 1)
                 return employees;
+            
 
-            else
-            {
-                var count =  employees.Select(e=>e.Orders.Count).Min();
-                return db.Employees.Find(e => e.Orders.Count == count);
-            }
+            var count =  Convert.ToInt32(employees.Select(e=>e.Orders.Count).Min());
+            var result = db.Employees.Find(e => e.Orders.Count == count).ToList();
+            return result;
         }
 
         public static void SendOrder(int id)

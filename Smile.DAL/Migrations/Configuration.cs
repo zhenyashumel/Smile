@@ -10,7 +10,6 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Smile.DAL.SmileContext";
         }
 
         protected override void Seed(Smile.DAL.SmileContext context)

@@ -1,24 +1,7 @@
-﻿@model IEnumerable<Smile.Entities.Order>
-@{
-    ViewBag.Title = "Главная";
-}
+﻿<h1>Добро пожаловать!</h1>
+<div>@Html.ActionLink("Оставить заявку", "MakeOrder")</div>
 
+<div>@Html.ActionLink("Войти как администратор", "Authorize")</div>
 
-@foreach (var el in Model)
-{
-    <div>
-        <p>Date: @el.Date.ToString("dd MMMMMMMMMM yyyy")</p>
-        <p>Raiting: @el.Raiting</p>
-        <span>
-            Employees:
-            @foreach (var e in el.Employees)
-            {
-                @(e.Name + " ")
-            }
-        </span>
-    </div>
-}
-
-   
 
 

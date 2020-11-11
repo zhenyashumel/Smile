@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Smile.Entities.Order>
+
+@{
+    ViewBag.Title = "GetOrdersInfo";
+}
+
+<h2>GetOrdersInfo</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Персонаж
+        </th>
+        <th>
+            Язык
+        </th>
+        <th>
+            Дата
+        </th>
+        
+        <th>
+            Длительность
+        </th>
+        <th>
+            Номер телефона
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Character.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Language.Lang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Выбрать аниматора", "Choose", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

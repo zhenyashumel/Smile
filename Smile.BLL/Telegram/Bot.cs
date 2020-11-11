@@ -1,4 +1,6 @@
 ﻿
+using Smile.Entities;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -21,11 +23,11 @@ namespace Smile.BLL.Telegram
             await client.SetWebhookAsync("");
         }
        
-        public static async Task SendInfo()
+        public static async Task SendInfo(int id, string message)
         {
             if (client == null)
                 await BotInit();
-            await client.SendTextMessageAsync(418826130, "Мяяяяу");
+            await client.SendTextMessageAsync(id, message);
         }
 
         public static void Get()

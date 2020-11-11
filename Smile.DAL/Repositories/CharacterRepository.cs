@@ -24,7 +24,7 @@ namespace Smile.DAL.Repositories
 
         public Character Get(int id)
         {
-            return db.Characters.FirstOrDefault(e => e.Id == id);
+            return db.Characters.FirstOrDefault(c => c.Id == id);
         }
 
         public void Create(Character item)

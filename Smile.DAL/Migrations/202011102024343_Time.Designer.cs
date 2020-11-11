@@ -7,13 +7,13 @@ namespace Smile.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class Time : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Time));
         
         string IMigrationMetadata.Id
         {
-            get { return "202010101349055_InitialCreate"; }
+            get { return "202011102024343_Time"; }
         }
         
         string IMigrationMetadata.Source

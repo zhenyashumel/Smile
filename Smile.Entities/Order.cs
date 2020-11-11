@@ -13,6 +13,17 @@ namespace Smile.Entities
         public virtual ICollection<Employee> Employees { get; set; }
         public float Raiting { get; set; }
 
+        public int? CharacterId { get; set; }
+        public Character Character { get; set; }
+
+        public TimeSpan Time { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public  bool InProgress { get; set; }
+
+        public int? LanguageId { get; set; }
+        public Language Language { get; set; }
         public Order()
         {
             Employees = new List<Employee>();
